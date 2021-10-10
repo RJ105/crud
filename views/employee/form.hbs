@@ -1,0 +1,30 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Full Name" value="{{employee.name}}">
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{employee.email}}">
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Emp_id</label>
+            <input type="number" class="form-control" name="emp_id" placeholder="5 digit number " value="{{employee.emp_id}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="number" class="form-control" name="mob_no" placeholder="Mobile" value="{{employee.mob_no}}">
+        </div>
+        
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+        <a class="btn btn-secondary" href="/employee/list">View All</a>
+    </div>
+</form>
